@@ -24,6 +24,9 @@ function remove_silent_letters(word){
   gsub(/kn/, "n", word)
   gsub(/wh/, "w", word)
   gsub(/ck/, "k", word)
+  gsub(/ght/, "t", word)
+  gsub(/dge/, "j", word)
+  gsub(/ph/, "f", word)
   return word
 }
 function remove_repeating_letters(word){
