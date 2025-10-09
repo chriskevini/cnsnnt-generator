@@ -8,7 +8,8 @@ MINIMUM_TRIGGER_LENGTH=3
 PAD=$(($MINIMUM_WORD_LENGTH-3))
 # bad triggers are words from the wordlist that are shorter than MINIMUM_WORD_LENGTH and have the form VCC.. or CCC..
 bad_triggers=$(rg ^.[^aeiouy]{$PAD}[^aeiouy]?$  wiki_20k.txt | paste -sd ",")
-
+# manually adding some bad triggers
+bad_triggers=$bad_triggers",awk,brb,omg,pls,esl"
 awk -v highlander=$HIGHLANDER -v minimum_word_length=$MINIMUM_WORD_LENGTH -v minimum_trigger_length=$MINIMUM_TRIGGER_LENGTH -v bad_triggers="$bad_triggers" '
 function disemvowel(word) {
   gsub(/[aeiouy]/, "", word)
