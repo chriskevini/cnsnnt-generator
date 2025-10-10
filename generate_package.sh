@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-awk -v trigger_key="" '
+sort | awk -v trigger_key="" '
 BEGIN {
   print "matches:"
 }
