@@ -13391,7 +13391,7 @@ matches:
     replace: "denmark"
     word: true
     propagate_case: true
-  - triggers: ["dns", "dnns"]
+  - triggers: ["dnns"]
     replace: "dennis"
     word: true
     propagate_case: true
@@ -17397,10 +17397,6 @@ matches:
     propagate_case: true
   - triggers: ["envsnd", "nvsnd"]
     replace: "envisioned"
-    word: true
-    propagate_case: true
-  - triggers: ["env"]
-    replace: "envoy"
     word: true
     propagate_case: true
   - triggers: ["enzm", "nzm"]
@@ -42365,10 +42361,6 @@ matches:
     propagate_case: true
   - triggers: ["srdn"]
     replace: "sardinia"
-    word: true
-    propagate_case: true
-  - triggers: ["ssh"]
-    replace: "sasha"
     word: true
     propagate_case: true
   - triggers: ["ssktchwn"]

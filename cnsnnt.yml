@@ -15935,10 +15935,6 @@ matches:
     replace: "dancing"
     word: true
     propagate_case: true
-  - triggers: ["dns"]
-    replace: "danes"
-    word: true
-    propagate_case: true
   - triggers: ["dngr"]
     replace: "danger"
     word: true
@@ -16835,23 +16831,11 @@ matches:
     replace: "denied"
     word: true
     propagate_case: true
-  - triggers: ["dns"]
-    replace: "denies"
-    word: true
-    propagate_case: true
-  - triggers: ["dns"]
-    replace: "denis"
-    word: true
-    propagate_case: true
-  - triggers: ["dns"]
-    replace: "denise"
-    word: true
-    propagate_case: true
   - triggers: ["dnmrk"]
     replace: "denmark"
     word: true
     propagate_case: true
-  - triggers: ["dns", "dnns"]
+  - triggers: ["dnns"]
     replace: "dennis"
     word: true
     propagate_case: true
@@ -16885,10 +16869,6 @@ matches:
     propagate_case: true
   - triggers: ["dnncd"]
     replace: "denounced"
-    word: true
-    propagate_case: true
-  - triggers: ["dns"]
-    replace: "dense"
     word: true
     propagate_case: true
   - triggers: ["dnsl"]
@@ -19539,10 +19519,6 @@ matches:
     replace: "dunedin"
     word: true
     propagate_case: true
-  - triggers: ["dns"]
-    replace: "dunes"
-    word: true
-    propagate_case: true
   - triggers: ["dngn"]
     replace: "dungeon"
     word: true
@@ -21393,10 +21369,6 @@ matches:
     propagate_case: true
   - triggers: ["envsnd", "nvsnd"]
     replace: "envisioned"
-    word: true
-    propagate_case: true
-  - triggers: ["env"]
-    replace: "envoy"
     word: true
     propagate_case: true
   - triggers: ["enzm", "nzm"]
@@ -52745,10 +52717,6 @@ matches:
     propagate_case: true
   - triggers: ["srgnt"]
     replace: "sargent"
-    word: true
-    propagate_case: true
-  - triggers: ["ssh"]
-    replace: "sasha"
     word: true
     propagate_case: true
   - triggers: ["ssktchwn"]

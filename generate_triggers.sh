@@ -1,15 +1,24 @@
 #!/usr/bin/env bash
 
+while getopts ":h" opt; do
+  case $opt in
+    h)
+      # Highlander is an option that makes sure there are no collisions with the triggers.
+      HIGHLANDER=1
+      ;;
+  esac
+done
+
+shift $((OPTIND - 1))
+
 FILE_PATH=$1
-# Highlander is an option that makes sure there are no collisions with the triggers.
-HIGHLANDER=0
 MINIMUM_WORD_LENGTH=5
 MINIMUM_TRIGGER_LENGTH=3
 PAD=$(($MINIMUM_WORD_LENGTH-3))
 # bad triggers are words from the wordlist that are shorter than MINIMUM_WORD_LENGTH and have the form VCC.. or CCC..
 bad_triggers=$(rg ^.[^aeiouy]{$PAD}[^aeiouy]?$  wiki_20k.txt | paste -sd ",")
 # manually adding some bad triggers
-bad_triggers=$bad_triggers",awk,brb,omg,pls,esl"
+bad_triggers=$bad_triggers",awk,brb,omg,pls,esl,dns,env,ssh"
 awk -v highlander=$HIGHLANDER -v minimum_word_length=$MINIMUM_WORD_LENGTH -v minimum_trigger_length=$MINIMUM_TRIGGER_LENGTH -v bad_triggers="$bad_triggers" '
 function disemvowel(word) {
   gsub(/[aeiouy]/, "", word)
